@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer dasar: Hijau → Biru -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#00A69C"
+                android:endColor="#37B34A"/>
+        </shape>
+    </item>
+
+    <!--    &lt;!&ndash; Overlay putih lebih kuat di atas &ndash;&gt;-->
+    <!--    <item>-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <gradient-->
+    <!--                android:type="linear"-->
+    <!--                android:angle="90"-->
+    <!--                android:startColor="#CCFFFFFF"-->
+    <!--                android:centerColor="#88FFFFFF"-->
+    <!--                android:endColor="#00FFFFFF"/>-->
+    <!--        </shape>-->
+    <!--    </item>-->
+    <!--    &lt;!&ndash; Overlay putih lebih kuat di atas &ndash;&gt;-->
+    <!--    <item>-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <gradient-->
+    <!--                android:type="linear"-->
+    <!--                android:angle="90"-->
+    <!--                android:startColor="#CCFFFFFF"-->
+    <!--                android:centerColor="#88FFFFFF"-->
+    <!--                android:endColor="#00FFFFFF"/>-->
+    <!--        </shape>-->
+    <!--    </item>-->
+
+</layer-list>

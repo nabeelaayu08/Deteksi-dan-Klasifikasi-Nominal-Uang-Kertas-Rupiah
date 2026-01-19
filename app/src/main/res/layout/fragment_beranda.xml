@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.fragments.BerandaFragment">
+
+    <!-- ScrollView untuk konten yang bisa di-scroll -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:fillViewport="true">
+
+    <!-- Kotak putih dengan sudut atas melengkung -->
+    <LinearLayout
+        android:id="@+id/container_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_top_box"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <!-- KOTAK PREVIEW GAMBAR -->
+        <FrameLayout
+            android:id="@+id/preview_box"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/rounded_preview_box"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp">
+
+            <!-- Image preview -->
+            <ImageView
+                android:id="@+id/img_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/preview_image"
+                android:visibility="gone" />
+
+            <!-- Placeholder (icon + teks) -->
+            <LinearLayout
+                android:id="@+id/placeholder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/rounded_preview_box"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/img_camera_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="@string/camera_icon"
+                    app:tint="@color/primary_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/ambil_atau_pilih_gambar"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_green"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/ketuk_untuk_memilih"
+                    android:textColor="@color/gray_medium"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Reset Button (Top Right) -->
+            <Button
+                android:id="@+id/btn_reset"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/accent_red"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="gone" />
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/primary_green"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- TOMBOL DETEKSI NOMINAL -->
+        <Button
+            android:id="@+id/btnDetect"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="0dp"
+            android:text="Deteksi Nominal"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:background="@drawable/btn_green_rounded" />
+
+        <!-- Hasil Analisis Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:text="Hasil Analisis"
+            android:textStyle="bold"
+            android:textColor="@color/green_primary"
+            android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:textAlignment="center"
+                android:text="Rp -"
+                android:textStyle="bold"
+                android:textColor="@color/blue_primary"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/txtConfidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Confidence: -%"
+                android:textColor="#777777"
+                android:textSize="16sp" />
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Overlay Gelap (Background Dim) -->
+    <View
+        android:id="@+id/overlay_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Logo di atas -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_beranda"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo"
+        android:layout_gravity="bottom" />
+
+</RelativeLayout>

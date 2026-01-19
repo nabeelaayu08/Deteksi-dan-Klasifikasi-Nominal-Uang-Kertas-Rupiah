@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BerapaRupiah</string>
+    <string name="subtitle">Kenali Nominal dengan Mudah</string>
+    <string name="logo">Logo BerapaRupiah</string>
+
+    <!-- Beranda -->
+    <string name="camera_icon">Icon Camera</string>
+    <string name="preview_image">Preview Image</string>
+    <string name="ambil_atau_pilih_gambar">Ambil atau Pilih Gambar</string>
+    <string name="ketuk_untuk_memilih">Ketuk untuk memilih foto</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="pilih_galeri">Pilih dari Galeri</string>
+    <string name="deteksi_nominal">Deteksi Nominal</string>
+    <string name="reset">Reset</string>
+    <string name="hasil_analisis">Hasil Analisis</string>
+
+    <!-- Riwayat -->
+    <string name="riwayat_title">Riwayat Deteksi</string>
+    <string name="empty_riwayat">Belum ada riwayat deteksi</string>
+
+    <!-- Profil -->
+    <string name="profil_title">Profil Saya</string>
+    <string name="logout">Keluar</string>
+
+    <!-- Paste Web Client ID dari Firebase -->
+    <string name="default_web_client_id">763019625396-td83pbsrjk4r7p6rllifaccv1re9veak.apps.googleusercontent.com</string>
+</resources>
